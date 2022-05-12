@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>GROUP MANAGER Dashboard</title>
+{% endblock %}
+
+
+
+{% block body %}
+<div class="user_to_update">
+    <h1 style="text-align: center"> GROUP MANAGER Dashboard [Update user group]</h1>
+
+        <form action="/manager/updategroup/{{ _id }}" method="POST">
+            <input type="text" name="name" id="name" value="{{name}}">
+            <input type="submit" value="Update user">
+        </form>
+
+</div>
+{% endblock %}

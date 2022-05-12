@@ -1,0 +1,38 @@
+body, html {
+    margin: 100;
+    font-family: sans-serif;
+    background-color: #212121;
+    color : white;
+}
+
+.content {
+    margin: 0 auto;
+    width: 400px;
+}
+
+table, td, th {
+    border: 1px solid rgb(175, 175, 175);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+form {
+    margin-top: 20px;
+    text-align : center;
+}
+
+#content {
+    width: 70%;
+}

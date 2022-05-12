@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Group Manager Dashboard</title>
+{% endblock %}
+
+
+
+{% block body %}
+<div clas="content">
+    <h1 style="text-align: center"> Group Manager Dashboard </h1>
+    <table>
+        <tr>
+            <th>USER_ID</th>
+            <th>NAME</th>
+            <th>GROUP NAME</th>
+            <th>ACTIONS</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.user_name }}</td>
+                <td> </td>
+                <td>
+                    <a href="/admin/delete/{{ user.id }}" style="color:red; text-decoration:none">Remove member from group</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

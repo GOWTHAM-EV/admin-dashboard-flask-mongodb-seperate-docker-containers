@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Admin Dashboard</title>
+{% endblock %}
+
+
+
+{% block body %}
+<div clas="content">
+    <h1 style="text-align: center"> Admin Dashboard </h1>
+    <table>
+        <tr>
+            <th>USER_ID</th>
+            <th>NAME</th>
+            <th>DATE OF JOINING</th>
+            <th>ACTIONS</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user._id }} </td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.date }}</td>
+                <td>
+                    <a href="/admin/delete/{{ user._id }}"  style="color:red; text-decoration:none">Delete</a>
+                    <br>
+                    <a href="/admin/update/{{ user._id }}" style="color:rgb(255, 142, 50); text-decoration:none">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <form action="/admin" method="POST">
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Add user">
+    </form>
+</div>
+{% endblock %}
